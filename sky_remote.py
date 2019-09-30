@@ -10,12 +10,12 @@ class SkyRemote:
         self.ip=ip
         self.port=port
 
-    def http_json() -> str:
-    response = requests.get('http://' + self.ip + ':9006/as/system/information')
-    return response.content
+    def http_json(self) -> str:
+        response = requests.get('http://' + self.ip + ':9006/as/system/information')
+        return response.content
 
-    def powerStatus(self)
-     output = json.loads(http_json())        
+    def powerStatus(self):
+        output = json.loads(self.http_json())        
         if (output['activeStandby'] == False):
             return 'On'
         else:
