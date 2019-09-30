@@ -20,6 +20,10 @@ remoteControl.press(['channelup', 'record', 'select'])
 ```python
 remoteControl = SkyRemote('192.168.0.40', SkyRemote.SKY_Q_LEGACY)
 ```
+### Check Power Status
+```python
+print(remoteControl.powerStatus())
+```
 ### Remote control commands
 `sky` `power`
 
