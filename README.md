@@ -1,9 +1,6 @@
 # sky-remote
-Python module to send remote control commands to a Sky TV box
+Python module to send remote control commands to a Sky TV box, and receive its power status
 
-## Usage
-#### Installation
-`pip install sky-remote`
 #### Simple example
 ```python
 from sky_remote import SkyRemote
@@ -16,10 +13,7 @@ remoteControl.press('power')
 # Now send sequences of commands
 remoteControl.press(['channelup', 'record', 'select'])
 ```
-### Sky Q (if firmware < 060)
-```python
-remoteControl = SkyRemote('192.168.0.40', SkyRemote.SKY_Q_LEGACY)
-```
+
 ### Check Power Status
 ```python
 print(remoteControl.powerStatus())
